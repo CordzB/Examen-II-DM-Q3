@@ -91,9 +91,9 @@ export default function CrearScreen() {
         url_fotografia: foto || null
       });
 
-      Alert.alert('Éxito', 'Producto creado ✅');
+      Alert.alert('Éxito', 'Producto creado ');
       limpiarFormulario();
-      navigation.goBack(); // vuelve a la lista
+      navigation.goBack(); 
     } catch (err) {
       console.log('ERROR al guardar:', err);
       Alert.alert('No se pudo guardar', String(err?.message || err));

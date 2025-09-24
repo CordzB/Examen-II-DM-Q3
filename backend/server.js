@@ -1,4 +1,3 @@
-// server.js
 import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
@@ -56,7 +55,7 @@ app.post('/productos', async (req, res) => {
       fs.writeFileSync(filepath, buff);
       fotoURL = `/uploads/${filename}`;
     } else if (url_fotografia) {
-      fotoURL = url_fotografia; // URL directa
+      fotoURL = url_fotografia; 
     }
 
     const [result] = await pool.query(
